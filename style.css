@@ -1,4 +1,4 @@
-/* 全体を囲う円 */
+/* 全体を囲う枠 */
 .box_wrap {
     border: 2px solid black;
     border-radius: 20px;
@@ -6,8 +6,9 @@
 }
 
 
-/* ==== 小さい円 ==== */
+/* ==== 円 ==== */
 .circle_wrap {
+    margin: 0 200px;
     display: flex;
     width: 15%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
 }
@@ -35,14 +36,24 @@
     font-size: 0.9vw;
   }
 
-.multiplication {
+.small_size::after {
+    position: absolute;
     content: "×";
+    color: white;
+}
+
+.small_size_3::after {
+    position: absolute;
+    content: "=";
+    color: red;
+    right: 0;
+    font-size: 2em;
 }
 
 
 
 
-
+/* 以下不要 */
 /* 
 .circle_l_wrap {
     width: 18%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
