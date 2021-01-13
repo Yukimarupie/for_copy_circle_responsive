@@ -1,0 +1,74 @@
+/* 全体を囲う円 */
+.box_wrap {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+
+/* ==== 小さい円 ==== */
+.circle_wrap {
+    display: flex;
+    width: 15%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
+}
+
+.circle {
+    position: relative;
+    padding: 50%;
+    border-radius: 50%;
+    margin-right: 30%;/* 円同志の間隔を開ける。ここの%を変えても円の大きさは変わらない */
+    background-color: #000;
+  }
+
+  .circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7em;
+    height: 1em;
+    margin-top: -1.5em;
+    margin-left: -3.5em;
+    /* 文字の色について */
+    color: #fff;
+    line-height: 1.4rem;/* 行と行の間隔 */
+    text-align: center;/* 文字列を中央揃え */
+    font-size: 0.9vw;
+  }
+
+.multiplication {
+    content: "×";
+}
+
+
+
+
+
+/* 
+.circle_l_wrap {
+    width: 18%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
+}
+
+.circle_l {
+    position: relative;
+    padding: 50%;
+    border-radius: 50%;
+    background-color: orange;
+    margin-right: 20%;/* 円同志の間隔を開ける。ここの%を変えても円の大きさは変わらない */
+    
+  }
+
+  .circle_l span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7em;
+    height: 1em;
+    margin-top: -1.5em;
+    margin-left: -3.5em;
+    /* 文字の色について */
+    color: #fff;
+    line-height: 1.4rem;/* 行と行の間隔 */
+    text-align: center;/* 文字列を中央揃え */
+    font-size: 0.9em;
+  }
+ */
