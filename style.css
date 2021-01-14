@@ -1,85 +1,66 @@
-/* 全体を囲う枠 */
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* 全体を囲う枠 */
 .box_wrap {
     border: 2px solid black;
     border-radius: 20px;
     padding: 1%;
+    margin: 3%;
 }
 
-
-/* ==== 円 ==== */
-.circle_wrap {
-    margin: 0 200px;
+  .wrapper {
     display: flex;
-    width: 15%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
-}
-
-.circle {
+    flex-direction: row;
+    align-items: center;/* これで円自体の縦軸が中央揃えになる。 */
+    justify-content: center;/* これで円自体の横軸が中央揃えになる。 */
+    width: 100%;
+    margin: 10px auto;
+  }
+  
+  .circle {
     position: relative;
-    padding: 50%;
     border-radius: 50%;
-    margin-right: 30%;/* 円同志の間隔を開ける。ここの%を変えても円の大きさは変わらない */
-    background-color: #000;
+    display: flex; /* これで文字の縦横軸が中央揃えになる準備ができる */
+    align-items: center; /* これで文字の縦軸が中央揃えになる */
+    justify-content: center; /* これで文字の横軸が中央揃えになる */
+  }
+
+  .circle_small {
+    background-color: #000;/* circle自体じゃなく、色や大きさなど要素が違うところは、独自クラスの方に記載 */
+    width: 16vw;
+    height: 16vw;
   }
 
   .circle span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 7em;
-    height: 1em;
-    margin-top: -1.5em;
-    margin-left: -3.5em;
-    /* 文字の色について */
-    color: #fff;
-    line-height: 1.4rem;/* 行と行の間隔 */
-    text-align: center;/* 文字列を中央揃え */
-    font-size: 0.9vw;
+    display: block;
+    width: 60%;
+    height: auto;
+    text-align: center;/* 文字の横軸を中央揃え */
   }
-
-.small_size::after {
-    position: absolute;
-    content: "×";
-    color: white;
-}
-
-.small_size_3::after {
-    position: absolute;
-    content: "=";
-    color: red;
-    right: 0;
-    font-size: 2em;
-}
-
-
-
-
-/* 以下不要 */
-/* 
-.circle_l_wrap {
-    width: 18%;/* 円の大きさを決めるwidth。ページ幅の10%の大きさの円になる */
-}
-
-.circle_l {
-    position: relative;
-    padding: 50%;
-    border-radius: 50%;
-    background-color: orange;
-    margin-right: 20%;/* 円同志の間隔を開ける。ここの%を変えても円の大きさは変わらない */
     
+
+  .circle_small span {
+    color: #fff;
   }
 
-  .circle_l span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 7em;
-    height: 1em;
-    margin-top: -1.5em;
-    margin-left: -3.5em;
-    /* 文字の色について */
-    color: #fff;
-    line-height: 1.4rem;/* 行と行の間隔 */
-    text-align: center;/* 文字列を中央揃え */
-    font-size: 0.9em;
+  .circle_large {
+    background-color: #fff;/* circle自体じゃなく、色や大きさなど要素が違うところは、独自クラスの方に記載 */
+    border: solid 2px orange;
+    width: 20vw;
+    height: 20vw;
   }
- */
+
+  .circle_large span {
+    color: orange;
+  }
+
+  .multiplication,
+  .eaual {
+    padding: 0 2vw;
+    font-size: 3vw;
+  }
+  
